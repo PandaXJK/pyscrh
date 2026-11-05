@@ -1,9 +1,0 @@
-LICENSE
-README.md
-pyproject.toml
-pyscrh/__init__.py
-pyscrh.egg-info/PKG-INFO
-pyscrh.egg-info/SOURCES.txt
-pyscrh.egg-info/dependency_links.txt
-pyscrh.egg-info/requires.txt
-pyscrh.egg-info/top_level.txt
