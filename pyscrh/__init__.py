@@ -24,14 +24,22 @@ to start. You never need to touch ``dt`` or the game loop. Call
 :func:`stop_all` at any point to close the window and quit.
 """
 
-import pygame
+__all__ = [
+    "Sprite",
+    "clickGF",
+    "stop_all",
+    "WIDTH",
+    "HEIGHT",
+]
+__version__ = "0.1.8"
+
+import colorsys
+import inspect
 import math
 import random
-import inspect
 import sys
-import colorsys
 
-__version__ = "0.1.8"
+import pygame
 
 # --- pygame / window setup (runs on first import) -----------------------
 pygame.init()
@@ -827,13 +835,3 @@ def stop_all():
     """
     pygame.quit()
     sys.exit()
-
-
-# 魔法：让用户只写 "import pyscrh" 就能直接用 Sprite / clickGF / stop_all，
-# 不用再写 "from pyscrh import *"（和 pgzrun 的体验一致）。
-import __main__
-__main__.Sprite = Sprite
-__main__.clickGF = clickGF
-__main__.stop_all = stop_all
-__main__.WIDTH = WIDTH
-__main__.HEIGHT = HEIGHT
